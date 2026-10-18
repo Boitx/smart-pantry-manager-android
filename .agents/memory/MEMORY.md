@@ -1,1 +1,2 @@
 - [Native Android assignment target](android-studio-target.md) — Keep this assignment in native Java Android Studio source; do not replace it with an Expo preview.
+- [GitHub push access](github-push-access.md) — Verify current-project GitHub credentials before assuming a successful bind enables pushes.
