@@ -47,3 +47,11 @@ Thumbs.db
 # Replit
 .cache/
 .local/
+
+# Android Studio / Gradle
+**/.gradle/
+**/build/
+android-app/local.properties
+*.iml
+*.apk
+*.aab

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Smart Pantry</string>
+    <string name="pantry_title">My pantry</string>
+    <string name="suggestions_title">Recipes you can make</string>
+    <string name="settings_title">Settings</string>
+    <string name="nav_pantry">Pantry</string>
+    <string name="nav_recipes">Recipes</string>
+    <string name="nav_settings">Settings</string>
+</resources>

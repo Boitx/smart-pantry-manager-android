@@ -1,0 +1,12 @@
+<resources>
+    <style name="Theme.SmartPantry" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/pantry_green</item>
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorSecondary">@color/pantry_terracotta</item>
+        <item name="android:statusBarColor">@color/pantry_cream</item>
+        <item name="android:navigationBarColor">@color/pantry_cream</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:windowBackground">@color/pantry_cream</item>
+    </style>
+</resources>

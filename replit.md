@@ -1,6 +1,6 @@
-# [Project name]
+# Smart Pantry Manager
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Java Android Studio app for managing leftover ingredients and suggesting recipes only when every required ingredient and quantity is already in the pantry.
 
 ## Run & Operate
 
@@ -10,9 +10,12 @@ _Replace the heading above with the project's name, and this line with one sente
 - `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
 - `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
 - Required env: `DATABASE_URL` — Postgres connection string
+- `cd android-app && bash logic-tests/run.sh` — run the standalone Java strict-matching checks
+- Open `android-app/` in Android Studio to sync and run the native app (Android SDK Platform 35 required)
 
 ## Stack
 
+- Native app: Java 17 source, Android Gradle Plugin, SQLiteOpenHelper, RecyclerView, Material Components
 - pnpm workspaces, Node.js 24, TypeScript 5.9
 - API: Express 5
 - DB: PostgreSQL + Drizzle ORM
@@ -22,15 +25,19 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `android-app/app/src/main/java/za/co/richfield/smartpantry/data/DatabaseHelper.java` — SQLite schema, CRUD, and recipe seeds
+- `android-app/app/src/main/java/za/co/richfield/smartpantry/logic/IngredientMatcher.java` — strict recipe matching and unit conversion
+- `android-app/app/src/main/res/layout/` — Android screen and list-row layouts
+- `android-app/logic-tests/` — plain-Java checks for the matching rule
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- SQLite is the app's only persistence layer so the pantry works offline and stays on-device.
+- Suggestions require every recipe ingredient in sufficient quantity; partial matches are excluded.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Users can manage pantry ingredients, inspect recipes that strictly match their current stock, view recipe methods, and enable expiry-soon highlights.
 
 ## User preferences
 
@@ -38,7 +45,8 @@ _Populate as you build — explicit user instructions worth remembering across s
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- The Replit environment does not include the Android SDK; the Android Gradle build must be run in Android Studio with SDK Platform 35 installed.
+- Do not add server-side recipe or pantry matching; the source assignment requires an offline Java Android application.
 
 ## Pointers
 

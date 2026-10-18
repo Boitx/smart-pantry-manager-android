@@ -1,0 +1,11 @@
+<resources>
+    <color name="pantry_green">#315B45</color>
+    <color name="pantry_green_dark">#1F3F30</color>
+    <color name="pantry_cream">#F7F4EC</color>
+    <color name="pantry_surface">#FFFEFA</color>
+    <color name="pantry_terracotta">#B95F42</color>
+    <color name="pantry_ink">#242A25</color>
+    <color name="pantry_muted">#6D756E</color>
+    <color name="pantry_border">#E3E0D8</color>
+    <color name="pantry_error">#B3261E</color>
+</resources>

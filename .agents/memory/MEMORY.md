@@ -1,0 +1,1 @@
+- [Native Android assignment target](android-studio-target.md) — Keep this assignment in native Java Android Studio source; do not replace it with an Expo preview.
